@@ -9,4 +9,10 @@ function addTodo() {
   const insideDiv = document.createElement("div");
   insideDiv.innerHTML = title;
   document.getElementById("container").appendChild(insideDiv);
+  const insideDiv1 = document.createElement("div");
+  insideDiv1.innerHTML = description;
+  document.getElementById("container").appendChild(insideDiv1);
+  const button = document.createElement("button");
+  button.innerHTML = "Mark as Done!";
+  document.getElementById("container").appendChild(button)
 }
