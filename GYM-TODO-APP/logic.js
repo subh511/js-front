@@ -1,10 +1,16 @@
+function finished(obj) {
+  obj.innerHTML = "done!";
+}
+
+
+
 function addTodo() {
   const title = document.getElementById("title").value;
   const description = document.getElementById("description").value;
   // console.log(title.value);
   // console.log(description.value);
 
-  //creating a child div for container div which is parent 
+  //creating a child div for container div which is parent
   //and appending it as child;
   const insideDiv = document.createElement("div");
   insideDiv.innerHTML = title;
@@ -14,5 +20,8 @@ function addTodo() {
   document.getElementById("container").appendChild(insideDiv1);
   const button = document.createElement("button");
   button.innerHTML = "Mark as Done!";
-  document.getElementById("container").appendChild(button)
+  button.setAttribute("onclick",`finished(this)`);
+  document.getElementById("container").appendChild(button);
 }
+
+
